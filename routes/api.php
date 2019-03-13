@@ -34,8 +34,31 @@ Route::get('newarrivals','NewArrivalController@index');
 Route::group(['prefix' => 'newarrivals'], function() {
     Route::post('/', 'NewArrivalController@store');
     Route::post('/update/{newarrivals}','NewArrivalController@update');  
-    Route::delete('/delete/{newarrivals}','NewArrivalController@destroy');
-    
+    Route::delete('/delete/{newarrivals}','NewArrivalController@destroy');    
 });
+
+
+Route::get('bestbooks','BestBookController@index');
+Route::group(['prefix' => 'bestbooks'], function() {
+    Route::post('/', 'BestBookController@store');
+    Route::post('/update/{bestbooks}','BestBookController@update');  
+    Route::delete('/delete/{bestbooks}','BestBookController@destroy');    
+});
+
+
+Route::get('contactforms','ContactFormController@index');
+Route::group(['prefix' => 'contactforms'], function() {
+    Route::post('/', 'ContactFormController@store');
+    Route::post('/update/{contactforms}','ContactFormController@update');  
+    Route::delete('/delete/{contactforms}','ContactFormController@destroy');    
+});
+
+Route::get('abouts','AboutController@index');
+Route::group(['prefix' => 'abouts'], function() {
+    Route::post('/', 'AboutController@store');
+    Route::post('/update/{abouts}','AboutController@update');  
+    Route::delete('/delete/{abouts}','AboutController@destroy');    
+});
+
 
 
