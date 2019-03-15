@@ -59,6 +59,12 @@ Route::group(['prefix' => 'abouts'], function() {
     Route::post('/update/{abouts}','AboutController@update');  
     Route::delete('/delete/{abouts}','AboutController@destroy');    
 });
+Route::get('books','BookController@index');
+Route::group(['prefix' => 'books'], function() {
+    Route::post('/', 'BookController@store');
+    Route::post('/update/{books}','BookController@update');  
+    Route::delete('/delete/{Books}','BookController@destroy');    
+});
 
 
 
